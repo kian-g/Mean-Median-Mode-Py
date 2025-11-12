@@ -10,6 +10,17 @@ def print_options():
 
 
 def add_data():
+    """
+    Behavior:
+        Adds data points one at a time
+    Exceptions:
+        ValueError if value enetered is not a number
+    Returns:
+        None
+    Parameters:
+        None
+    """
+
     print("(q) to quit")
 
     n = len(data_pts) + 1
@@ -35,6 +46,17 @@ def add_data():
 
 
 def mean():
+    """
+    Behavior:
+        Finds the mean of a dataset.
+    Exceptions:
+        None
+    Returns:
+        result: the mean
+    Parameters:
+        None
+    """
+
     num_data = 0
     for val in data_pts.values():
         num_data += val
@@ -49,6 +71,17 @@ def mean():
 
 
 def median():
+    """
+    Behavior:
+        Finds the median of a dataset.
+    Exceptions:
+        None
+    Returns:
+        med: the median
+    Parameters:
+        None
+    """
+
     data_array = []
 
     for key, val in data_pts.items():
@@ -68,6 +101,17 @@ def median():
 
 
 def mode():
+    """
+    Behavior:
+        Finds the mode(s) of a dataset.
+    Exceptions:
+        None
+    Returns:
+        modes: the mode(s)
+    Parameters:
+        None
+    """
+
     modes = []
     max_freq = 0
     for val in data_pts.values():
@@ -90,6 +134,7 @@ def print_not_enough_data():
     print("You need at least one data point! Try adding some data!")
 
 
+# Main loop
 while True:
     print_options()
 
